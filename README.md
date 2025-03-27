@@ -161,28 +161,36 @@ Cela empêche les inscriptions non autorisées.
 
 ## Configuration VM (uniquement pour les utilisateurs Windows 11)
 
-1. Désactivez l'intégrité de la mémoire
-- Allez dans paramètre système
-- Entrez dans Confidentialité et Sécurité
-- Allez dans Sécurité Windows
-- Sécurité de l'appareil
-- Détail de l'isolation du noyau
-- Désactivez l'intégrité de la mémoire
+### Désactivez l'intégrité de la mémoire
+  1. Allez dans paramètre système
+  2. Entrez dans Confidentialité et Sécurité
+  3. Allez dans Sécurité Windows
+  4. Sécurité de l'appareil
+  5. Détail de l'isolation du noyau
+  6. Désactivez l'intégrité de la mémoire
 
-2. Désactiver les fonctionnalité Windows en rapport à Hyper-V
-- Faites un Win + R et executez ```optionalfeatures```
-- Désactivez :
-  - Hyper-V
-  - Pltaeforme de l'hyperviseur Windows
-  - Sous-système Windows pour Linux
-  - Virtual Machine Plateform
+    
 
-3. Modifier le bcdedit
-- Ouvrez l'invité de commande avec les droits d'administarteur
-- entrez ```bcdedit```
-- entrez la commande ```bcdedit /set hypervisorlaunchtype off```
+### Désactiver les fonctionnalité Windows en rapport à Hyper-V
+  1. Faites un Win + R et executez ```optionalfeatures```
+  2. Désactivez :
+    - Hyper-V
+    - Pltaeforme de l'hyperviseur Windows
+    - Sous-système Windows pour Linux
+    - Virtual Machine Plateform
+   
+      
 
-4. Paramétrer la VM pour la virtualisation imbriquée
-- Modifiez les paramètre de la VM
-- Allez dans Processors
-- Chochez la case **Virtualize Intel VT-x/EPT or AMD-V/RVI
+### Modifier le bcdedit
+  1. Ouvrez l'invité de commande avec les droits d'administarteur
+  2. entrez ```bcdedit```
+  3. entrez la commande ```bcdedit /set hypervisorlaunchtype off```
+
+    
+
+### Paramétrer la VM pour la virtualisation imbriquée
+  1. Modifiez les paramètre de la VM
+  2. Allez dans Processors
+  3. Chochez la case **Virtualize Intel VT-x/EPT or AMD-V/RVI
+
+---
